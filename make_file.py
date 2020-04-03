@@ -45,7 +45,7 @@ def save_images():
     for index in range(len(df)):
         emotion = df.loc[index][0]
         usage = df.loc[index][1] 
-        image = df.loc[index][2]
+        image = df.loc[index][2]#下载的数据集排列方式可能不一样，改一下就行
         data_array = list(map(float, image.split()))
         data_array = np.asarray(data_array)
         image = data_array.reshape(48, 48)
